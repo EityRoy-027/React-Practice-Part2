@@ -15,6 +15,12 @@ const  handlerClick2 =() => {
  alert("Second Button is Clicked!");
 }
 
+//with parameter
+const handlerAdd =(number) =>{
+const newNumber=number+10;
+alert(newNumber);
+}
+
   return (
     <>
     
@@ -40,6 +46,9 @@ const  handlerClick2 =() => {
   {/* directly using arrowfunction */}
   
   <button onClick={() => alert("Third Button is Clicked!")}>Third Button</button>
+
+
+  <button onClick={() =>handlerAdd(10)}>Fourth Button</button>
 
     </>
   )
