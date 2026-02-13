@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Counter from './Counter'
+import Cricket from './Cricket'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,6 +25,7 @@ alert(newNumber);
 
   return (
     <>
+    <Cricket></Cricket>
     <Counter></Counter>
   {/* event handler-without parameter */}
   
