@@ -8,29 +8,38 @@ function App() {
 
 
 function handlerClick1(){
-  alert("Already Clicked!");
+  alert("First Button is Clicked!");
+}
+
+const  handlerClick2 =() => {
+ alert("Second Button is Clicked!");
 }
 
   return (
     <>
     
-  {/* event handler */}
+  {/* event handler-without parameter */}
   
   {/* first-normal method */}
-  <button onClick={handlerClick1}>Click me</button>
+  <button onClick={handlerClick1}>First Button</button>
   
 
 
   
   {/* second-notused method */}
   <button onClick={function handlerClick1(){
-    alert("Already Clicked2!");
-  }}>Click me2</button>
+   alert("Mid Button is Clicked!");
+  }}>Mid Button</button>
 
   
   
   {/* third-arrowfunction method */}
-
+  
+  <button onClick={handlerClick2}>Second Button</button>
+  
+  {/* directly using arrowfunction */}
+  
+  <button onClick={() => alert("Third Button is Clicked!")}>Third Button</button>
 
     </>
   )
