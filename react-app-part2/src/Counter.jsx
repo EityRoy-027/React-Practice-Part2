@@ -13,6 +13,9 @@ borderRadius:"5px",
 }
 
 //Eventhandleing
+const handleClick = () => {
+
+}
 
 return(
 
@@ -20,7 +23,7 @@ return(
 
 <div style={counterStyle}>
     <h3>count:{count}</h3>
-    <button>Add</button>
+    <button onClick={handleClick(5)}>Add</button>
 </div>
 
 
