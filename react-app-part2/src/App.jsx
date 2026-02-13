@@ -24,7 +24,7 @@ alert(newNumber);
 
   return (
     <>
-    
+    <Counter></Counter>
   {/* event handler-without parameter */}
   
   {/* first-normal method */}
