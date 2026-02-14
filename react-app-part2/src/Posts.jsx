@@ -15,7 +15,7 @@ return(
 <h3>All Posts are here:{posts.length}</h3>
 
 {
-    posts.map( post => <Posts post={post}></Posts>)
+    posts.map( post => <Posts key={post.id} post={post}></Posts>)
 }
 
 </div>
