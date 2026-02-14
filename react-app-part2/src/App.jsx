@@ -51,7 +51,7 @@ const fetchUsers=fetch('https://jsonplaceholder.typicode.com/users')
   const friendPromise=fetchFriends();
 
 const fetchPosts = async () => {
-  const res = await fetch ('https://jsonplaceholder.typicode.com/users');
+  const res = await fetch ('https://jsonplaceholder.typicode.com/posts');
   return res.json();
 }
 const postPromise = fetchPosts();
