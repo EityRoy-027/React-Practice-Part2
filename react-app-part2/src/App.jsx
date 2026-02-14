@@ -48,7 +48,7 @@ Friends.jsx
   const friendPromise=fetchFriends();
 
   return (
-    <>
+    <div>
   
   {/* <Dog></Dog> */}
 
@@ -69,13 +69,14 @@ Friends.jsx
   {/* event handler-without parameter */}
   
   {/* first-normal method */}
-  <button onClick={handlerClick1}>First Button</button>
+  <div className='btndiv1'>
+  <button className='btn1' onClick={handlerClick1}>First Button</button>
   
 
 
   
   {/* second-notused method */}
-  <button onClick={function handlerClick1(){
+  <button  className='btn1' onClick={function handlerClick1(){
    alert("Mid Button is Clicked!");
   }}>Mid Button</button>
 
@@ -83,16 +84,17 @@ Friends.jsx
   
   {/* third-arrowfunction method */}
   
-  <button onClick={handlerClick2}>Second Button</button>
+  <button className='btn1' onClick={handlerClick2}>Second Button</button>
   
   {/* directly using arrowfunction */}
   
-  <button onClick={() => alert("Third Button is Clicked!")}>Third Button</button>
+  <button className='btn1' onClick={() => alert("Third Button is Clicked!")}>Third Button</button>
 
 
-  <button onClick={() =>handlerAdd(10)}>Fourth Button</button>
+  <button className='btn1' onClick={() =>handlerAdd(10)}>Fourth Button</button>
 
-    </>
+    </div>
+    </div>
   )
 }
 

@@ -40,11 +40,12 @@
 .read-the-docs {
   color: #888;
 }
-.btndiv{
+.btndiv,.btndiv1{
   display: flex;
   gap:10px;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
   
 }
 .btn{
@@ -56,4 +57,10 @@
 .card{
   border: 5px solid rgb(219, 21, 54);
   border-radius: 10px;
+}
+.btn1{
+  background-color: rgb(235, 123, 4);
+  border-radius: 5px;
+  color: rgb(221, 221, 175);
+  font-weight: bold;
 }
