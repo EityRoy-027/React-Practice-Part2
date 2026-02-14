@@ -1,7 +1,6 @@
-export default function (fetchUsers){
+import { use } from "react";
 
-const fetchUsers=fetch('https://react.dev/reference/react-dom')
-.then (res => res.json())
+export default function ({fetchUsers}){
 
 const users = use(fetchUsers);
 console.log(users);
@@ -12,7 +11,7 @@ return(
 <>
 
 <div className="card">
-<h3>User:</h3>
+<h3>User:{users.length}</h3>
 </div>
 
 </>

@@ -25,6 +25,11 @@ const newNumber=number+10;
 alert(newNumber);
 }
 
+// Users.jsx
+const fetchUsers=fetch('https://react.dev/reference/react-dom')
+.then (res => res.json())
+
+
   return (
     <>
 
@@ -32,8 +37,9 @@ alert(newNumber);
       <Users fetchUsers ={fetchUsers}></Users>
     </Suspense>
 
-    {/* <Cricket></Cricket>
-    <Counter></Counter> */}
+    <Cricket></Cricket>
+    <Counter></Counter>
+    
   {/* event handler-without parameter */}
   
   {/* first-normal method */}
