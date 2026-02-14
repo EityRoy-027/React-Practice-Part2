@@ -8,6 +8,8 @@ import Users from './Users'
 import { Suspense } from 'react'
 import Friends from './Friends'
 import Dog from './Dog'
+import Posts from './Posts'
+
 
 function App() {
 
@@ -39,13 +41,21 @@ const handlerAdd =(number) =>{
 const fetchUsers=fetch('https://jsonplaceholder.typicode.com/users')
 .then (res => res.json())
 
-Friends.jsx
+// Friends.jsx
+
+//using asyc
  const fetchFriends = async () =>{
   const res= await fetch ('https://jsonplaceholder.typicode.com/users');
   return res.json();
    }
-  
   const friendPromise=fetchFriends();
+
+const fetchPosts = async () => {
+  const res = await fetch ('https://jsonplaceholder.typicode.com/users');
+  return res.json();
+}
+const postPromise = fetchPosts();
+
 
   return (
     <div>
@@ -53,8 +63,13 @@ Friends.jsx
   {/* <Dog></Dog> */}
 
   
+  <Suspense fallback={<h3>Posts are coming.....</h3>}>
+    <Posts postPromise={postPromise}>
+
+    </Posts>
+  </Suspense>
   
-  <Suspense fallback={<h3>Friends are coming....</h3>}>
+  <Suspense fallback={<h3>Friends are coming.....</h3>}>
     <Friends friendPromise={friendPromise}>
     </Friends>
   </Suspense>
