@@ -6,8 +6,12 @@ import Counter from './Counter'
 import Cricket from './Cricket'
 import Users from './Users'
 import { Suspense } from 'react'
+import Friends from './Friends'
 
 function App() {
+
+const friendPromise=fetchFriends();
+
   const [count, setCount] = useState(0)
 
 
@@ -29,9 +33,20 @@ alert(newNumber);
 const fetchUsers=fetch('https://react.dev/reference/react-dom')
 .then (res => res.json())
 
+//Friends.jsx
+ const fetchFriends = async () =>{
+const res= await fetch ('https://react.dev/reference/react-dom');
+return res.json;
+ }
+
 
   return (
     <>
+  
+  <Suspense fallback={<h3>Friends are coming....</h3>}>
+    <Friends friendPromise={friendPromise}>
+    </Friends>
+  </Suspense>
 
     <Suspense fallback={<h2>Loading</h2>}>
       <Users fetchUsers ={fetchUsers}></Users>
