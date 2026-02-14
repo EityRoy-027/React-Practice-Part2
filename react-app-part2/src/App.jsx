@@ -7,8 +7,11 @@ import Cricket from './Cricket'
 import Users from './Users'
 import { Suspense } from 'react'
 import Friends from './Friends'
+import Dog from './Dog'
 
 function App() {
+
+const [dog, setDog] = useState("");
 
 //  const friendPromise=fetchFriends();
 
@@ -29,6 +32,10 @@ const newNumber=number+10;
 alert(newNumber);
 }
 
+
+//Dog.jsx
+ 
+
 // Users.jsx
 const fetchUsers=fetch('https://react.dev/reference/react-dom')
 .then (res => res.json())
@@ -42,6 +49,10 @@ return res.json;
 
   return (
     <>
+  
+  <Dog></Dog>
+
+  
   
   <Suspense fallback={<h3>Friends are coming....</h3>}>
     <Friends friendPromise={friendPromise}>
