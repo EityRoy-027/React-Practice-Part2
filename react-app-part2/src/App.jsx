@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Counter from './Counter'
 import Cricket from './Cricket'
+import Users from './Users'
+import { Suspense } from 'react'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,8 +27,13 @@ alert(newNumber);
 
   return (
     <>
-    <Cricket></Cricket>
-    <Counter></Counter>
+
+    <Suspense fallback={<h2>Loading</h2>}>
+      <Users fetchUsers ={fetchUsers}></Users>
+    </Suspense>
+
+    {/* <Cricket></Cricket>
+    <Counter></Counter> */}
   {/* event handler-without parameter */}
   
   {/* first-normal method */}
