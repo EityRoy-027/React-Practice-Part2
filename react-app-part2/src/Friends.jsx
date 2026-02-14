@@ -1,6 +1,6 @@
 import { use } from "react";
 
-export default function Friends({friendsPromise}){
+export default function Friends({friendPromise}){
 
     const friends=use(friendsPromise);
    console.log(friends);

@@ -10,7 +10,7 @@ import Friends from './Friends'
 
 function App() {
 
-const friendPromise=fetchFriends();
+//  const friendPromise=fetchFriends();
 
   const [count, setCount] = useState(0)
 
