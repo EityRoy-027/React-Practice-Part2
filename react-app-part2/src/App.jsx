@@ -13,44 +13,44 @@ function App() {
 
 const [dog, setDog] = useState("");
 
-//  const friendPromise=fetchFriends();
 
-  const [count, setCount] = useState(0)
+// const [count, setCount] = useState(0)
 
 
 function handlerClick1(){
   alert("First Button is Clicked!");
 }
 
-const  handlerClick2 =() => {
- alert("Second Button is Clicked!");
+const  handlerClick2 = ( ) => {
+  alert("Second Button is Clicked!");
 }
 
 //with parameter
 const handlerAdd =(number) =>{
-const newNumber=number+10;
-alert(newNumber);
+  const newNumber=number+10;
+  alert(newNumber);
 }
 
 
 //Dog.jsx
- 
+
 
 // Users.jsx
-const fetchUsers=fetch('https://react.dev/reference/react-dom')
+const fetchUsers=fetch('https://jsonplaceholder.typicode.com/users')
 .then (res => res.json())
 
-//Friends.jsx
+Friends.jsx
  const fetchFriends = async () =>{
-const res= await fetch ('https://react.dev/reference/react-dom');
-return res.json;
- }
-
+  const res= await fetch ('https://jsonplaceholder.typicode.com/users');
+  return res.json();
+   }
+  
+  const friendPromise=fetchFriends();
 
   return (
     <>
   
-  <Dog></Dog>
+  {/* <Dog></Dog> */}
 
   
   

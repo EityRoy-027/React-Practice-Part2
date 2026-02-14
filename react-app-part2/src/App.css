@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+.btndiv{
+  display: flex;
+  gap:10px;
+  justify-content: center;
+  align-items: center;
+  
+}
+.btn{
+  background-color: rgb(235, 219, 4);
+  border-radius: 5px;
+  color: maroon;
+  font-weight: bold;
+}
+.card{
+  border: 5px solid rgb(219, 21, 54);
+  border-radius: 10px;
+}

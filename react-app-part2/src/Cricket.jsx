@@ -28,7 +28,7 @@ const paracolor={
 return(
 <>
 
-<div>
+<div style={{border:'4px solid green', borderRadius:'10px'}}>
     {
         score>=50 && <p style={paracolor}>Congratulations! Half Century!</p>
     }
@@ -36,9 +36,11 @@ return(
     <h4>Country: Bangladesh</h4>
     <h1>Score:{score}</h1>
     
-    <button onClick={handleSingle}>Single</button>
-    <button onClick={handleFour}>Four</button>
-    <button onClick={handleSix}>Six</button>
+    <div className="btndiv">
+    <button className="btn" onClick={handleSingle}>Single</button>
+    <button className="btn" onClick={handleFour}>Four</button>
+    <button className="btn" onClick={handleSix}>Six</button>
+    </div>
 </div>
 
 
